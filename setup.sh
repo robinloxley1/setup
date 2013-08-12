@@ -39,7 +39,11 @@ fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
-git clone git@github.com:robinloxley1/dotfiles.git
+
+# use https for login to avoid creating keys
+# git clone git@github.com:robinloxley1/dotfiles.git
+git clone https://github.com/robinloxley1/dotfiles.git
+
 ln -sb dotfiles/.screenrc .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
